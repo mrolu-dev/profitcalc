@@ -31,7 +31,7 @@ node
  {
  //sh "./scripts/run.sh"
  nodejs(nodeJSInstallationName: 'nodejs16.19.1') {
-      sh 'npm start &'
+      sh 'npm start'
     }
 }    
     
