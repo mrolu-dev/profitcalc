@@ -1,24 +1,38 @@
-pipeline {
-  agent any
-
-  stages {
-    stage('Build') {
-      steps {
+node
+{
+ 
+  stage("CheckOutCodeGit")
+  {
+   git 'https://github.com/ristabel/profitcalc.git'
+ }
+ 
+ stage("Build")
+ {
+ nodejs(nodeJSInstallationName: 'nodejs16.19.1') {
         sh 'npm install'
-      }
     }
-
-    stage('Test') {
-      steps {
-        sh 'npm test'
-      }
+ }  
+ 
+  stage('ExecuteSonarQubeReport') {
+     nodejs(nodeJSInstallationName: 'nodejs16.19.1') {
+     //   sh 'npm run sonar'
     }
-
-    stage('Deploy') {
-      steps {
-        sh 'npm run build'
+      
+        } 
+		
+    stage('UploadintoNexus') {
+       nodejs(nodeJSInstallationName: 'nodejs16.19.1') {
+         // sh 'npm publish'
       }
+      
+          }	
+ 
+ stage('RunNodeJsApp')
+ {
+ //sh "./scripts/run.sh"
+ nodejs(nodeJSInstallationName: 'nodejs16.19.1') {
+        sh 'npm start &'
     }
-  }
+}    
+    
 }
-
