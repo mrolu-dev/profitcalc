@@ -10,18 +10,9 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 // Connect to MongoDB
-mongoose
-  .connect('mongodb://localhost:27017/dropshipping', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log('Connected to MongoDB');
-  })
-  .catch((err) => {
-    console.error('Failed to connect to MongoDB', err);
-  });
+require('./src/utils/db');
 
 // Routes
 app.use('/api/calculator', calculatorRoutes);
