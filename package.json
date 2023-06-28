@@ -4,11 +4,11 @@
   "description": "Web application for dropshipping calculations",
   "main": "index.js",
   "scripts": {
-    "server": "node server.js",
+ 
     "start": "node index.html",
     "test": "echo \"No tests specified\" && exit 0",
     "build": "echo \"Build command\""
-    "sonar": "node sonar.js"
+ 
     
   },
   "dependencies": {
@@ -22,7 +22,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ristabel/profitcalc.git"
+    "url": "https://github.com/ristabel/profitcalc"
+  },
+  "engines": {
+    "node": "v10.6.0"
   },
   "keywords": [
     "profit"
