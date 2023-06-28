@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const calculatorRoutes = require('./src/routes/calculatorRoutes');
 
 const app = express();
-const port = 3000;
+const port = 3020;
 
 // Middleware
 app.use(bodyParser.json());
