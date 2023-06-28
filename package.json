@@ -4,14 +4,21 @@
   "description": "Web application for dropshipping calculations",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "server": "node server.js",
+    "start": "node index.html",
     "test": "echo \"No tests specified\" && exit 0",
     "build": "echo \"Build command\""
+    "sonar": "node sonar.js"
+    
   },
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^6.1.4",
     "body-parser": "^1.19.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9",
+    "sonarqube-scanner": "^2.7.0"
   },
   "repository": {
     "type": "git",
@@ -21,7 +28,7 @@
     "profit"
   ],
   "author": "Olu Olumoyin",
-  "license": "ISC",
+  "license": "Laflor Solutions",
   "bugs": {
     "url": "https://github.com/ristabel/profitcalc/issues"
   },
