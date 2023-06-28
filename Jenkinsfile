@@ -3,7 +3,7 @@ node
  
   stage("CheckOutCodeGit")
   {
-   git branch: 'master', credentialsId: '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', url:'https://github.com/ristabel/profitcalc'
+   git branch: 'master', credentialsId: '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', url:'https://github.com/ristabel/profitcalc'
  }
  
  stage("Build")
