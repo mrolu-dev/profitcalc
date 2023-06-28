@@ -1,0 +1,22 @@
+{
+  "name": "profitcalc",
+  "version": "1.0.0",
+  "description": "Web application for dropshipping calculations",
+  "main": "index.js",
+  "scripts": {
+    "test": " echo \\ \"No tests specified\\\" && exit 0\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ristabel/profitcalc.git"
+  },
+  "keywords": [
+    "profit"
+  ],
+  "author": "Olu Olumoyin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ristabel/profitcalc/issues"
+  },
+  "homepage": "https://github.com/ristabel/profitcalc#readme"
+}
