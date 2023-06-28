@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Connect to MongoDB
-require('./src/utils/db');
+// require('./src/utils/db');
 
 // Routes
 app.use('/api/calculator', calculatorRoutes);
