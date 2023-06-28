@@ -4,7 +4,14 @@
   "description": "Web application for dropshipping calculations",
   "main": "index.js",
   "scripts": {
-    "test": " echo \\ \"No tests specified\\\" && exit 0\""
+    "start": "node server.js",
+    "test": "echo \"No tests specified\" && exit 0",
+    "build": "echo \"Build command\""
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.1.4",
+    "body-parser": "^1.19.1"
   },
   "repository": {
     "type": "git",
