@@ -13,9 +13,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Connect to MongoDB
 require('./src/utils/db');
 
-// Rest of the code remains the same
-
-
 // Routes
 app.use('/api/calculator', calculatorRoutes);
 
