@@ -6,7 +6,7 @@
   "scripts": {
  
     "start": "node */server.js",
-    "test": "echo \"No tests specified\" && exit 0",
+    "test": "node */calculate.test.js",
     "build": "echo \"Build command\""
  
     
@@ -31,7 +31,7 @@
     "profit"
   ],
   "author": "Olu Olumoyin",
-  "license": "Laflor Solutions",
+  "license": "Laflor Solutions Inc.",
   "bugs": {
     "url": "https://github.com/ristabel/profitcalc/issues"
   },
