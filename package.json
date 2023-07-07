@@ -2,14 +2,16 @@
   "name": "dropshipping-calculator",
   "version": "1.0.0",
   "description": "Web application for dropshipping calculations",
-  "main": "index.js",
+  "main": "index.html",
   "publishConfig": {
     "registry":"http:NexusServerIP:portNo/repos/"
   },
   "scripts": {
  
-    "start": "node */server.js",
-    
+    "server": "node */server.js",
+    "start1": "nodemon calculator.js",
+    "start": "node calculator.js",    
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"Build command\""
  
     
@@ -34,7 +36,7 @@
     "profit"
   ],
   "author": "Olu Olumoyin",
-  "license": "Laflor Solutions Inc.",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ristabel/profitcalc/issues"
   },
