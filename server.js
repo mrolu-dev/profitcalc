@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const calculatorRoutes = require('./src/routes/calculatorRoutes');
+const calculatorRoutes = require('calculatorRoutes');
 const path = require('path');
 const app = express();
 const port = 3000;
@@ -23,7 +23,7 @@ console.log("Middleware configured successfully.");
 
 // Connect to MongoDB
 console.log("Connecting to MongoDB...");
-require('./src/utils/db');
+require('db');
 
 
 // Routes
