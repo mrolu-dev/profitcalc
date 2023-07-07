@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 mongoose
-  .connect('mongodb://localhost:27017/dropshipping', {
+  .connect('mongodb://127.0.0.1:27017/dropshipping', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
