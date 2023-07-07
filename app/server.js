@@ -17,7 +17,10 @@ require('./src/utils/db');
 
 
 // Routes
+console.log("Setting up routes...");
 app.use('/api/calculator', calculatorRoutes);
+console.log("Routes configured successfully.");
+
 
 // Start the server
 console.log(`Starting the server on port ${port}...`);
