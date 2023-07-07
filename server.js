@@ -28,7 +28,7 @@ require('db');
 
 // Routes
 console.log("Setting up routes...");
-app.use('/api/calculator', calculatorRoutes);
+app.use('calculator', calculatorRoutes);
 console.log("Routes configured successfully.");
 
 
