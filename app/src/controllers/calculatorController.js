@@ -17,10 +17,24 @@ module.exports = {
       profit,
       expenses,
     });
-
-    try {
+    // Save the new item
       await newItem.save();
-      res.status(200).json({ success: true, newItem });
+    
+     // Redirect to the result page
+      res.redirect('/api/calculator/result');
+    } catch (err) {
+      console.error('Failed to save item:', err);
+      res.status(500).json({ success: false, message: 'Failed to save item' });
+    }
+  },
+
+  displayResult: async (req, res) => {
+    try {
+      // Retrieve the calculation result from the database
+      const resultItem = await Item.findOne().sort({ _id: -1 }).exec();
+      // Render the result page with the calculation result
+      res.render('result', { resultItem });
+   
     } catch (err) {
       console.error('Failed to save item:', err);
       res.status(500).json({ success: false, message: 'Failed to save item' });
