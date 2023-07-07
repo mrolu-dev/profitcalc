@@ -1,5 +1,5 @@
 const Item = require('../models/Item');
-const calculateProfit = require('./utils/calculateProfit');
+const calculateProfit = require('../utils/calculateProfit');
 
 module.exports = {
   calculate: async (req, res) => {
