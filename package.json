@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Web application for dropshipping calculations",
   "main": "server.js",
- 
+ "publishConfig": {
+    "registry":"http:NexusServerIP:portNo/repos/"
+  },
   },
   "scripts": {
  
