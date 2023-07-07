@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.get("/", (req, res) => {
   // Logic to handle the root URL request
-  res.sendFile(path.join(__dirname, '*/index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 console.log("Middleware configured successfully.");
