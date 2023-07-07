@@ -5,9 +5,10 @@ module.exports = {
   calculate: async (req, res) => {
     const { costPrice, sellingPrice, taxRate, shippingCost } = req.body;
 
+   
     // Calculate profit and expenses
     const { profit, expenses } = calculateProfit(costPrice, sellingPrice, taxRate, shippingCost);
-
+  try {
     // Create a new item in the database
     const newItem = new Item({
       costPrice,
