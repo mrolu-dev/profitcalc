@@ -22,7 +22,7 @@ module.exports = {
       await newItem.save();
     
      // Redirect to the result page
-      res.redirect('/app/public/result.html');
+      res.redirect('/app/public/result');
     } catch (err) {
       console.error('Failed to save item:', err);
       res.status(500).json({ success: false, message: 'Failed to save item' });
