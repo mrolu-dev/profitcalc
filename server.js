@@ -23,7 +23,7 @@ console.log("Middleware configured successfully.");
 
 // Connect to MongoDB
 console.log("Connecting to MongoDB...");
-require('db');
+require('./db');
 
 
 // Routes
