@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const calculatorRoutes = require('./src/routes/calculatorRoutes');
-
+const path = require('path');
 const app = express();
 const port = 3000;
 
@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.get("/", (req, res) => {
   // Logic to handle the root URL request
-  res.send("Welcome to the homepage"); // Example response
+  res.sendFile(path.join(__dirname, '/index.html'));
 });
 
 console.log("Middleware configured successfully.");
