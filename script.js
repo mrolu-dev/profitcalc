@@ -6,6 +6,14 @@ document.getElementById('calculatorForm').addEventListener('submit', (e) => {
   const taxRate = parseFloat(document.getElementById('taxRate').value);
   const shippingCost = parseFloat(document.getElementById('shippingCost').value);
 
+// Perform calculations or API requests to obtain the result
+  const profit = sellingPrice - costPrice - shippingCost;
+  const expenses = costPrice + shippingCost;
+
+  // Redirect to the result page with query parameters
+  const resultUrl = `result.html?profit=${profit}&expenses=${expenses}`;
+  window.location.href = resultUrl;
+  
   const payload = { costPrice, sellingPrice, taxRate, shippingCost };
 
   fetch('/api/calculator/calculate', {
