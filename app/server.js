@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const calculatorRoutes = require('./app/src/routes/calculatorRoutes');
+const calculatorRoutes = require('./src/routes/calculatorRoutes');
 
 const app = express();
 const port = 3000;
