@@ -12,7 +12,7 @@ app.use(express.static("public"));
 
 // Root URL handler
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/views/index.html'));
+  res.sendFile(path.join(__dirname, '/index.html'));
 });
 
 
