@@ -78,3 +78,37 @@ app.post('/data, req, res) => {
     res.status(500).json({error: 'could not create a new document'})
   })
 })
+app.delete('/data/:id', (req, res) => {
+  if (ObjectId.isValid(req.params.id)){
+    db.collection('data)
+      .deleteOne({_id:ObjectId(req.parrams.id)})
+      .then(answer =>{
+        res.status(200).json(answer)
+      })
+      .catch(err => {
+        res.status(500).json({error: 'could not delete the document'})
+    })
+                  }
+  else {
+    res.status(500).json({error: 'Not a valid doc id'})
+  }
+    })
+
+app.patch('/data/:id', (req, res) => {
+  const updates = req.body
+  
+   if (ObjectId.isValid(req.params.id)){
+    db.collection('data)
+      .updateOne({_id:ObjectId(req.parrams.id)}, {$set: updates})
+      .then(answer =>{
+        res.status(200).json(answer)
+      })
+      .catch(err => {
+        res.status(500).json({error: 'could not update the document'})
+    })
+                  }
+  else {
+    res.status(500).json({error: 'Not a valid doc id'})
+  }
+    })
+  
