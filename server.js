@@ -39,10 +39,16 @@ app.use('/api/calculator/calculate', calculatorRoutes);
 console.log("Routes configured successfully.");
 
 app.get('/data', (req,res) =>{
+  //current page
+  const page = req.query.p || 0
+  const dataPerPage = 3
+  
   let data =[]
   db.collection('data')
   .find() 
   .sort()
+  .skip(page*dataPerPage)
+  .limit(dataPerPage)
   .forEach(data => data.push(data))
   .then(() => {
     res.status(200).json(data)
